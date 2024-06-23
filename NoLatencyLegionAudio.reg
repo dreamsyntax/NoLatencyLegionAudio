@@ -1,0 +1,15 @@
+﻿Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceInstall\Restrictions]
+"DenyDeviceIDs"=dword:00000001
+"DenyDeviceIDsRetroactive"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceInstall\Restrictions\DenyDeviceIDs]
+"1"="ROOT\\Nahimic_Mirroring"
+"2"="SWC\\VEN_AVOL&AID_0300"
+"3"="SWC\\VEN_AVOL&AID_0400"
+"4"="ROOT\\NahimicBTLink"
+"5"="ROOT\\NahimicXVAD"
+"6"="SWC\\VEN_AVOL&AID_0802"
+"7"="SWC\\VEN_ELEVOC&AID_0001"
+"8"="SWC\\RGB"
