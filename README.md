@@ -1,13 +1,17 @@
 # NoLatencyLegionAudio
 The Legion Pro 7 has awful latency on Windows when using the drivers and APOs provided by default, typically 90ms - 120ms latency on speaker output.
+
 This .reg file is a successor to NoNahimic but specifically for the Legion Pro 7.
 
 This repo provides a .reg file that blocks Nahimic/A-Volute and Elevoc APOs and drivers from installing. This does NOT block the Realtek Driver, which is required to have working audio on a fresh boot due to the TI amps.
+
 Currently its not known how to block the `Realtek Semiconductor Corp. - Extension 10.35.220.64` - which is the main cause of the issue.
+
 As such you will have to periodically uninstall this Extension (not the driver) with RAPR, and Pause Windows Updates to prevent it from installing.
 
 ## Before and After videos:
 See before.mp4 in the repo
+
 See after.mp4 in the repo
 
 ## How do I check my current output latency?
@@ -30,6 +34,7 @@ See after.mp4 in the repo
 
 ## How to Get 0-latency audio output on your built in speakers
 Unfortunately, the .reg block must be run/done BEFORE connecting to the internet in a fresh Windows installation (last tested Windows 11, 23H2).
+
 If Nahimic/Elevoc drivers are installed at any point, configurations will cause problems and no speaker output will work, or latency will be present.
 
 0. Note: The touchpad driver will not be installed until Internet is connected. You must use an external mouse or navigate with keyboard only until then.
