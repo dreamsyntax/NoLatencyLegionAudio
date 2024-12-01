@@ -33,12 +33,18 @@ See after.mp4 in the repo
 * SWC\RGB -- Tobii Eye Tracking (Not related, but has a misleading HWID, and ultimately is bloated software. Remove this line in the reg if you want to use Tobii)
 
 ## How to Get 0-latency audio output on your built in speakers
-Unfortunately, the .reg block must be run/done BEFORE connecting to the internet in a fresh Windows installation (last tested Windows 11, 23H2).
+
+Tested on
+* Windows 11 23H2
+* Windows 11 24H2
+
+
+Unfortunately, the .reg block must be run/done BEFORE connecting to the internet in a fresh Windows installation.
 
 If Nahimic/Elevoc drivers are installed at any point, configurations will cause problems and no speaker output will work, or latency will be present.
 
-0. Note: The touchpad driver will not be installed until Internet is connected. You must use an external mouse or navigate with keyboard only until then.
-1. Fresh Install Windows 11 WITHOUT connecting to the Internet. You can use Ventoy with a Windows 11 ISO, which will automatically remove the Internet requirement without need for OOBE\BYPASSNRO
+0. Note: The touchpad driver and WiFi driver will not be installed until Internet is connected. You must use an external mouse or navigate with keyboard only until Internet is connected. You must use ethernet or have the WiFi network driver downloaded in advance.
+1. Fresh Install Windows 11 WITHOUT connecting to the Internet. To bypass the screen that asks you to connect to a Network, Press Shift+F10 then type OOBE\BYPASSNRO. A reboot will occur, after "I don't have Internet" will be an option.
 2. Run the .reg file from this repo, and reboot.
 3. Connect to the Internet, let Windows Update fully, and install whatever drivers. You may see errors from the blocks from the reg, this is okay to ignore.
 4. Note: NVIDIA gpu may not be detected. To resolve this, download LTT: https://github.com/BartoszCichecki/LenovoLegionToolkit and change "Hybrid-GPU" to "Hybrid". Reboot. Then let Windows Update install a stock nvidia driver. From here, you can install the latest nvidia drivers as usual after.
