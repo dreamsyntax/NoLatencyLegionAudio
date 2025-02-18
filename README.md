@@ -1,5 +1,15 @@
 # NoLatencyLegionAudio
-The Legion Pro 7 has awful latency on Windows when using the drivers and APOs provided by default, typically 90ms - 120ms latency on speaker output.
+The Legion Pro 7 has awful latency on Windows when using the drivers and APOs provided by default, typically 90ms - 200ms latency on speaker output.
+With all the bloat enabled, 200ms is expected.
+
+UPDATE: As of some unknown time, on 24H2, even running this will unfortunately result in 90ms latency. While this is still an improvement compared to 200ms, it is a shame this continued to plague this hardware.
+A workaround has NOT been found.
+I pretty much exclusively use Linux on this hardware now which has 0ms latency for the speakers.
+You do need a fix for Linux audio, found here: https://github.com/DanielWeiner/tas2781-fix-16IRX8H
+
+
+--
+
 
 This .reg file is a successor to NoNahimic but specifically for the Legion Pro 7.
 
